@@ -1,0 +1,27 @@
+{
+  "name": "search helper",
+  "description":"This is a search helper!",
+  "version": "2.0",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "*://*/*"
+  ],
+  "browser_action": {
+    "default_title": "search helper"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["search.js"],
+      "css":["search.css"]
+    }
+  ],
+  "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "matches": ["*://*/*"]
+  },
+  "manifest_version": 2
+}
